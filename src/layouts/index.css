@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    text-size-adjust: none;
+    user-select: none;
+}
+*:focus {
+    outline: none;
+}
+html {
+    font-size: 11px;
+    background: #212121;
+    color: white;
+}
+body {
+    margin: 0;
+    font-size: 1.3rem;
+    font-family: Open Sans, sans-serif;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    touch-callout: none !important;
+    -webkit-touch-callout: none !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    text-decoration-color: none;
+}
+/* input {
+    border-radius: 0;
+    -webkit-user-select: text;
+    user-select: text;
+}
+textarea {
+    -webkit-user-select: text;
+    user-select: text;
+}
+.Grid {
+    position: relative;
+    overflow: auto;
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+}
+.Grid.VirtualScroll {
+    outline: none;
+    -webkit-overflow-scrolling: touch;
+}
+.Grid__innerScrollContainer {
+    box-sizing: borderBox;
+    overflow: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+.Grid__cell {
+    position: absolute;
+}
+button {
+    border-radius: 0;
+}
+button,
+input,
+textarea {
+    font-family: Open Sans, sans-serif;
+}
+ul.numberedList li {
+    margin-bottom: 10px;
+    list-style-type: decimal;
+}
+ul li ul.subList li {
+    margin-bottom: 10px;
+    list-style-type: lower-alpha;
+} */
