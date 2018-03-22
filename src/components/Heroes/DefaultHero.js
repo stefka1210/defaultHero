@@ -70,9 +70,10 @@ const HeroContainer = styled.div`
         margin: 0 auto;
         justify-content: flex-end;
         align-items: center;
-        margin: 0px 60px;
+        padding: 0px 60px;
         @media (max-width: 768px) {
             margin: 30px;
+            padding: 0;
         }
     }
     .Hero-Content-Body {
