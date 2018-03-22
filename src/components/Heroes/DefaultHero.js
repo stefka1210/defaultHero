@@ -32,6 +32,8 @@ const HeroContainer = styled.div`
         min-height: inherit;
         overflow: hidden;
         width: 100vw;
+        .gatsby-image-wrapper {
+        }
         .gatsby-image-wrapper div:first-child {
             display: none;
         }
@@ -97,6 +99,16 @@ const HeroContainer = styled.div`
     }
 `
 
+const fgImgStyles = {
+    position: 'absolute',
+    top: '50%',
+    transform: 'translate(-50%,-50%)',
+    width: '100%',
+    left: '25%',
+    width: '75%',
+    height: 'auto',
+}
+
 export default class DefaultHero extends Component {
     static propTypes = {
         heroAlignType: PropTypes.string,
@@ -110,7 +122,6 @@ export default class DefaultHero extends Component {
         return (
             <HeroContainer className={`HeroContainer ${heroAlignType}`}>
                 <div className="Hero-Bg Hero-Layer">
-                    {/* <img src={BgImage} alt="bg-image" /> */}
                     <Img
                         fadeIn={true}
                         outerWrapperClassName={'myOuterWrapper'}
@@ -130,15 +141,7 @@ export default class DefaultHero extends Component {
                             position: 'static',
                             overflow: 'initial',
                         }}
-                        imgStyle={{
-                            position: 'absolute',
-                            top: '50%',
-                            transform: 'translate(-50%,-50%)',
-                            width: '100%',
-                            left: '25%',
-                            width: '75%',
-                            height: 'auto',
-                        }}
+                        imgStyle={fgImgStyles}
                         sizes={data.foreground.sizes}
                     />
                 </div>
