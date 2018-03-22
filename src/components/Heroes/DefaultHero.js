@@ -20,6 +20,10 @@ const HeroContainer = styled.div`
     @media (min-width: 1920px) {
         min-height: 640px;
     }
+    @media (max-width: 767px) {
+        flex-direction: column;
+        min-height: 50vw;
+    }
     .myOuterWrapper {
         min-height: inherit;
     }
@@ -35,57 +39,60 @@ const HeroContainer = styled.div`
     .Hero-Bg {
         z-index: 11;
     }
-    &.right {
-        .Hero-Mg {
-            z-index: 22;
-            margin: 0 auto;
-            max-width: 1920px;
+    .Hero-Mg {
+        z-index: 22;
+        margin: 0 auto;
+        max-width: 1920px;
+    }
+    .Hero-Fg {
+        z-index: 33;
+        margin: 0 auto;
+        max-width: 1920px;
+    }
+    .Hero-Content {
+        display: flex;
+        position: absolute;
+        min-height: inherit;
+        overflow: hidden;
+        width: 100vw;
+        z-index: 44;
+        @media (max-width: 767px) {
+            min-height: 0;
+            top: 100%;
         }
-        .Hero-Fg {
-            z-index: 33;
-            margin: 0 auto;
-            max-width: 1920px;
+    }
+    .Hero-Content-Container {
+        display: flex;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0px 60px;
+        @media (max-width: 768px) {
+            margin: 30px;
         }
-        .Hero-Content {
-            display: flex;
-            position: absolute;
-            min-height: inherit;
-            overflow: hidden;
-            width: 100vw;
-            z-index: 44;
-        }
-        .Hero-Content-Container {
-            display: flex;
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            justify-content: flex-end;
-            align-items: center;
-        }
-        .Hero-Content-Body {
-            display: flex;
-            flex-direction: column;
-            padding: 26px 0 40px;
-            width: 100%;
-            background: red;
+    }
+    .Hero-Content-Body {
+        display: flex;
+        flex-direction: column;
+        padding: 26px 0 40px;
+        width: 100%;
+        background: red;
 
-            @media (min-width: 768px) {
-                border: 0;
-                padding: 0;
-                width: 352px;
-            }
-            @media (min-width: 1024px) {
-                width: 452px;
-            }
-            @media (max-width: 1280px) {
-                margin: 0px 60px;
-            }
-            @media (min-width: 1280px) {
-                width: 512px;
-            }
-            @media (min-width: 2560px) {
-                width: 676px;
-            }
+        @media (min-width: 768px) {
+            border: 0;
+            padding: 0;
+            width: 352px;
+        }
+        @media (min-width: 1024px) {
+            width: 452px;
+        }
+        @media (min-width: 1280px) {
+            width: 512px;
+        }
+        @media (min-width: 2560px) {
+            width: 676px;
         }
     }
 `
