@@ -13,13 +13,12 @@ const IndexPage = ({data}) => (
 
 export default IndexPage
 
-//queries(uniqueName!) only work layout & pages, from there you can send props down to the components
+//queries(uniqueName!) only work in layout & pages, from there you can send props down to the components
 export const query = graphql`
     query SiteQuery {
         site {
             siteMetadata {
                 title
-                desc
             }
         }
         background: imageSharp(id: {regex: "/soccerStadium_1-bg-lg-2x.jpg/"}) {
@@ -28,8 +27,8 @@ export const query = graphql`
                 ...GatsbyImageSharpSizes
             }
         }
-        # foreground: imageSharp(id: {regex: "/mobileMockup_5.png/"}) {
-        foreground: imageSharp(id: {regex: "/player_3.png/"}) {
+        foreground: imageSharp(id: {regex: "/mobileMockup_5.png/"}) {
+            #foreground: imageSharp(id: {regex: "/player_3.png/"}) {
             sizes(maxWidth: 2880, quality: 70) {
                 ...GatsbyImageSharpSizes
             }
@@ -41,7 +40,12 @@ export const query = graphql`
                     frontmatter {
                         title
                         date(formatString: "DD MMMM YYYY")
-                        background
+                        type
+                        contentPosition
+                        backgroundSrc
+                        middlegroundSrc
+                        foregroundSrc
+                        ctaTarget
                     }
                     fields {
                         slug

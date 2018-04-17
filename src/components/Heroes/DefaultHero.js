@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
-//import BgImage from '../../images/soccerStadium_1-bg-lg-2x.jpg'
-
 const HeroContainer = styled.div`
     min-height: 100vw;
     display: flex;
@@ -32,8 +30,6 @@ const HeroContainer = styled.div`
         min-height: inherit;
         overflow: hidden;
         width: 100vw;
-        .gatsby-image-wrapper {
-        }
         .gatsby-image-wrapper div:first-child {
             display: none;
         }
@@ -112,14 +108,15 @@ const fgImgStyles = {
 
 export default class DefaultHero extends Component {
     static propTypes = {
-        heroAlignType: PropTypes.string,
+        contentPosition: PropTypes.string,
     }
     static defaultProps = {
-        heroAlignType: 'right',
+        contentPosition: 'right',
     }
 
     render() {
         const {data, location, heroAlignType} = this.props
+        console.log('data: ', data)
         return (
             <HeroContainer className={`HeroContainer ${heroAlignType}`}>
                 <div className="Hero-Bg Hero-Layer">
